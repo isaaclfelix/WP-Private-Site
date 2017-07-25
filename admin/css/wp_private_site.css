@@ -1,0 +1,49 @@
+.form-table td {
+	padding: 20px 10px !important;
+}
+.allowed-users {
+	margin: 0 !important;
+}
+.allowed-user .remove:before {
+	transition: ease 0.3s;
+}
+.allowed-user .remove:hover {
+	cursor: pointer;
+	opacity: 0.6;
+}
+.ui-autocomplete {
+	max-height: 100px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+* html .ui-autocomplete {
+	height: 100px;
+}
+.custom-combobox {
+	position: relative;
+	display: inline-block;
+}
+.custom-combobox-toggle {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-left: -1px;
+	padding: 0;
+}
+.custom-combobox-input {
+	margin: 0;
+	padding: 5px 10px;
+}
+.ui-icon-triangle-1-s:before {
+	content: "\f140";
+}
+.ui-button {
+	background: #FFF;
+	border: solid 1px #72777c;
+	-moz-align-items: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+.ui-button.ui-state-hover {
+	cursor:pointer;
+}
