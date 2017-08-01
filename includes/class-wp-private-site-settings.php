@@ -7,12 +7,24 @@
  * @package    WP_Private_Site
  * @subpackage WP_Private_Site/includes
  */
-?>
-<?php
 class WP_Private_Site_Settings {
+	private function wp_private_site_canActivate($input) {
+		$active = get_option('wp_private_site_active');
+		$allowed_users = get_option('wp_private_site_allowed_users');
+		if (!$allowed_users && $active) {
+			add_settings_error('wp_private_site_allowed_users','wp_private_site_allowed_users_error',__('We could not start the private site because no users are whitelisted','wp-private-site'),'error');
+			delete_option('wp_private_site_active');
+		}
+		return $input;
+	}
+
+	private function wp_private_site_userlist_validation($input) {
+		return $input;
+	}
+
 	public static function settings() {
-		register_setting('wp_private_site_menu', 'wp_private_site_active');
-		register_setting('wp_private_site_menu', 'wp_private_site_allowed_users');
+		register_setting('wp_private_site_menu', 'wp_private_site_active', 'wp_private_site_canActivate');
+		register_setting('wp_private_site_menu', 'wp_private_site_allowed_users', 'wp_private_site_userlist_validation');
 		
 		add_settings_section("wp_private_site_active_section1",
 		 __("Enable / Disable", "wp-private-site"),
