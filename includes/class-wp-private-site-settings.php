@@ -18,13 +18,9 @@ class WP_Private_Site_Settings {
 		return $input;
 	}
 
-	private function wp_private_site_userlist_validation($input) {
-		return $input;
-	}
-
 	public static function settings() {
 		register_setting('wp_private_site_menu', 'wp_private_site_active', 'wp_private_site_canActivate');
-		register_setting('wp_private_site_menu', 'wp_private_site_allowed_users', 'wp_private_site_userlist_validation');
+		register_setting('wp_private_site_menu', 'wp_private_site_allowed_users');
 		
 		add_settings_section("wp_private_site_active_section1",
 		 __("Enable / Disable", "wp-private-site"),

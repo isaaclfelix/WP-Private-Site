@@ -25,7 +25,7 @@ class WP_Private_Site_Page_Template {
 					$template = get_template_directory() . '/wp-private-site-landing.php';
 				}
 				else {
-					$template = plugin_dir_path( __FILE__ ) . 'public/wp-private-site-landing.php';
+					$template = plugin_dir_path( __FILE__ ) . '../public/wp-private-site-landing.php';
 				}
 				
 			}
