@@ -17,13 +17,22 @@ Version 1.0
 
 Set Up
 
-To install this plugin just download the zip folder and upload it through the wordpress dashboard in the add new plugin screen. 
-Then activate it and go to Settings -> Wordpress Private Site to setup.
+To install this plugin just download the zip folder with the 'Clone or download' button in the upper right area, and upload it through the wordpress dashboard in the add new plugin screen. 
+
+Alternative:
+You can also clone the repository in your computer, then zip the folder and upload it through the wordpress dashboard in the add new plugin screen.
+
+After the plugin is installed, activate it, and go to Settings -> Wordpress Private Site to setup.
+
 
 Configuration
 
 To grant a user access, just type the username in the input box and press the button 'Grant Access'. Once a user appears on the list, the site will display for him/her.
-You need to mark the 'enabled' checkbox to make your site private.
+
+You need to mark the 'enabled' checkbox to make your site private. Be sure to whitelist at least one user to avoid being completely blocked from your website. 
+
+The plugin currently turns itself off if you try to save an empty whitelist and activate the private site, but if this does happen to you and you get completely blocked from your website, get access to your plugins folder through FTP or CPanel, and rename the wp-private-site folder to something else, that will turn it off.
+
 
 Dependencies
 
